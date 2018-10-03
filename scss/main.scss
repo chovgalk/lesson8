@@ -1,0 +1,59 @@
+$color1: #ABF1F7;
+$color2: gold;
+body{
+	background: $color1;
+}
+
+
+@mixin element1{
+  column-count: 4;
+  column-width: 75px;
+  column-gap: 20px;
+  column-rule: 1px solid #fff;
+}
+
+@mixin element2{
+  text-shadow: #555 4px 4px 4px; /* color, h-offset, v-offset, blur */
+}
+
+@mixin element3{
+  border-radius: 10px 5px / 20px 10px;
+}
+
+h1{
+	color: $color2;
+	@include element2; 
+}
+
+.t1{
+	@include element1;
+}
+
+.t2{
+	border: 2px solid white;
+	padding: 16px;
+	@include element3;
+}
+
+/*ul.meny{
+	list-style-type: none;
+}
+ul.meny li{
+	float: left;
+}
+ul.meny li a{
+	border: 1px solid #000;
+	margin: 5px 15px;
+	padding: 15px 5px;
+}*/
+ul.meny{
+	list-style-type: none;
+	li{
+		float: left;
+	}
+	a{
+		border: 1px solid #000;
+		margin: 5px 15px;
+		padding: 15px 5px;
+	}
+}
